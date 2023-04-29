@@ -8,6 +8,10 @@ const https = require('https');
 const puppeteer = require('puppeteer');
 const jsdom = require('jsdom');
 
+//------------ String cleanup
+String.prototype.cleanup = function() {
+  return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-");
+}
 
 // ------------- DATABASE
 var db_config = {
@@ -89,8 +93,9 @@ app.get('/login', function(req, res) {
 			res.send('{"error":"no_result"}');
 		}
 		if(result.length > 0) {
-
-			res.json(result[0]["password"] == hash);
+      if(result[0]["password"] == hash){
+        res.send("OK");
+      }
 		}
 		else {
 			res.send('{"error":"no_result"}');
@@ -130,37 +135,77 @@ app.post('/add_user', function (req, res) {
 
 app.get('/scraper', (req, res) => {
 
+  // Scrapping the website
   (async () => {
+    console.log('Recieved: ' + typeof(req.query.link))
+
     // Launch the browser
     const browser = await puppeteer.launch();
 
     // Create a page
     const page = await browser.newPage();
-
-    // Go to your site
-    await page.goto('https://stackoverflow.com/questions/5878682/node-js-hash-string');
-
-    // Query for an element handle.
-    /*
-    const element = await page.waitForSelector('.question-hyperlink');
-
-    const title = await element.evaluate(el => el.textContent);
-
-    console.log(title)
-    * */
-
-    const text = await page.$$('.question-hyperlink')
  
-    console.log(text[0].evaluate(el => el.textContent))
+    // Go to your site
+    //await page.goto('https://www.clickbus.com.mx/es/buscar/celaya-gto-(todas-las-terminales)/ciudad-de-mexico-df-(todas-las-terminales)/?isGroup=&ida=2023-04-30&volta=#/step/departure');
+    let url = req.query.link
+    await page.goto(url);
+    
+    const lista_resultados = await page.$$('.search-results-list')
+ 
+    //const ejemplo = await lista_resultados[0].evaluate(el => el.textContent)
+    const trip_data = await lista_resultados[0].$$(".trip-data")
 
-    // Dispose of handle
-    //await element.dispose();
+    console.log("[INFO] Resultados obtenidos: " + trip_data.length)
+
+    let resultado = []
+    for(let i = 0; i<trip_data.length; i++){
+
+      let dict = new Object();
+      let temp = ""
+
+      // Company
+      let company = await trip_data[i].$$(".company")
+      temp = await company[0].evaluate(el => el.textContent)
+      temp = temp.cleanup().replaceAll('-', ' ')
+      dict["company"] = temp
+
+      // Hour
+      let hour = await trip_data[i].$$(".hour")
+      temp = await hour[0].evaluate(el => el.textContent)
+      temp = temp.cleanup().replaceAll('-', ' ')
+      dict["hour"] = temp
+
+      //bus-stations
+      let bus_stations = await trip_data[i].$$(".bus-stations")
+      temp = await bus_stations[0].evaluate(el => el.textContent)
+      temp = temp.cleanup().replaceAll('-', ' ')
+      dict["bus-stations"] = temp
+
+      //duration
+      let duration = await trip_data[i].$$(".duration")
+      temp = await duration[0].evaluate(el => el.textContent)
+      temp = temp.cleanup().replaceAll('-', ' ')
+      dict["duration"] = temp
+
+      //price
+      let price = await trip_data[i].$$(".price")
+      temp = await price[0].evaluate(el => el.textContent)
+      temp = temp.cleanup().replaceAll('-', ' ')
+      dict["price"] = temp
+
+      console.log(dict)
+      resultado.push(dict)
+      console.log("------------------------------")
+
+    }
 
     // Close browser.
-    await browser.close();
-  })();
+    await browser.close()
 
-  res.send("[OK]")
+    res.send(resultado)
+
+  })()
+
 })
 
 app.listen(port, () => {
