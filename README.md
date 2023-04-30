@@ -20,7 +20,5 @@ server IP: 122.8.178.68:3000 <br>
 
 ## Base de datos (MySQL) 
 - La base está deployada en una instancia de *Huawei Cloud*.
-- Server IP: 110.238.83.6:3000. 
-<img src="asda.png" style="width: 100%">
-
-### Tablas
+- Server IP: 110.238.83.6:3306. 
+<img src="https://i.ibb.co/dLCtwBR/rds.png" style="width: 100%">
