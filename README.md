@@ -1,2 +1,2 @@
 # hackathon-up
-<img src="https://i.ibb.co/ZYzDmZt/image.png" style="width: 100%">
+<img src="https://ibb.co/JyjJQh0" style="width: 100%">
