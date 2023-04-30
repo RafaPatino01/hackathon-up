@@ -103,8 +103,8 @@ app.get('/login', function(req, res) {
 	});
 });
 
-//POST new user to DB
-app.post('/add_user', function (req, res) {
+// new user to DB
+app.get('/add_user', function (req, res) {
 
 	console.log('Recieved: ' + typeof(req.query.user_name))
   console.log('Recieved: ' + typeof(req.query.password))  
