@@ -57,10 +57,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-// GET FROM DATABASE
-app.get('/get_test', function(req, res) {
+// GET CITIES FROM DATABASE
+app.get('/get_terminales', function(req, res) {
 
-	const sql = 'SELECT * FROM example';
+	const sql = 'SELECT * FROM terminales';
 
 	connection.query(sql,(err,result)=>{
 		if(err){
@@ -94,7 +94,7 @@ app.get('/login', function(req, res) {
 		}
 		if(result.length > 0) {
       if(result[0]["password"] == hash){
-        res.send("OK");
+        res.send(["OK"]);
       }
 		}
 		else {
@@ -126,7 +126,7 @@ app.post('/add_user', function (req, res) {
 			throw err;
 		}
 		else {
-			res.send("[OK]");
+			res.send(["OK"]);
     }
   })
 })
@@ -140,8 +140,12 @@ app.get('/scraper', (req, res) => {
     console.log('Recieved: ' + typeof(req.query.link))
 
     // Launch the browser
-    const browser = await puppeteer.launch();
-
+    const browser = await puppeteer.launch({
+      executablePath: '/usr/bin/chromium-browser',
+      headless:true,
+      args: ["--no-sandbox"]
+    })
+    
     // Create a page
     const page = await browser.newPage();
  
