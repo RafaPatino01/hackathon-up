@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		094808F329FDF8630013FAB2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094808F229FDF8630013FAB2 /* SearchView.swift */; };
-		094808F529FECC860013FAB2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094808F429FECC850013FAB2 /* Register.swift */; };
 		0950B28A29FD730E00E42049 /* MovilityAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B28929FD730E00E42049 /* MovilityAppApp.swift */; };
 		0950B29129FD731100E42049 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0950B29029FD731100E42049 /* Preview Assets.xcassets */; };
 		0950B2A029FD731200E42049 /* MovilityAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B29F29FD731200E42049 /* MovilityAppTests.swift */; };
@@ -18,8 +17,9 @@
 		0950B2BD29FD989900E42049 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0950B2BC29FD989900E42049 /* Colors.xcassets */; };
 		0950B2BF29FD9E0400E42049 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B2BE29FD9E0400E42049 /* IntroductionView.swift */; };
 		0950B2C129FD9E1D00E42049 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0950B2C029FD9E1D00E42049 /* Images.xcassets */; };
-		0950B2C429FDBEF100E42049 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B2C329FDBEF100E42049 /* Login.swift */; };
 		0960A0BE29FDEAC300A3D410 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960A0BD29FDEAC300A3D410 /* RegisterView.swift */; };
+		09AF4DA729FEDAFE00E69316 /* TerminalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF4DA629FEDAFE00E69316 /* TerminalsView.swift */; };
+		09AF4DAB29FEDB8800E69316 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF4DAA29FEDB8800E69316 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		094808F229FDF8630013FAB2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		094808F429FECC850013FAB2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		0950B28629FD730E00E42049 /* MovilityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovilityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0950B28929FD730E00E42049 /* MovilityAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovilityAppApp.swift; sourceTree = "<group>"; };
 		0950B29029FD731100E42049 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,8 +53,9 @@
 		0950B2BC29FD989900E42049 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0950B2BE29FD9E0400E42049 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
 		0950B2C029FD9E1D00E42049 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0950B2C329FDBEF100E42049 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0960A0BD29FDEAC300A3D410 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		09AF4DA629FEDAFE00E69316 /* TerminalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalsView.swift; sourceTree = "<group>"; };
+		09AF4DAA29FEDB8800E69316 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +90,7 @@
 				0950B2B829FD96F100E42049 /* LoginView.swift */,
 				0950B2BE29FD9E0400E42049 /* IntroductionView.swift */,
 				094808F229FDF8630013FAB2 /* SearchView.swift */,
+				09AF4DA629FEDAFE00E69316 /* TerminalsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,8 +164,7 @@
 		0950B2C229FDBEDA00E42049 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0950B2C329FDBEF100E42049 /* Login.swift */,
-				094808F429FECC850013FAB2 /* Register.swift */,
+				09AF4DAA29FEDB8800E69316 /* API.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -300,12 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0950B2C429FDBEF100E42049 /* Login.swift in Sources */,
+				09AF4DA729FEDAFE00E69316 /* TerminalsView.swift in Sources */,
 				0950B2B929FD96F200E42049 /* LoginView.swift in Sources */,
 				0960A0BE29FDEAC300A3D410 /* RegisterView.swift in Sources */,
 				0950B2BF29FD9E0400E42049 /* IntroductionView.swift in Sources */,
-				094808F529FECC860013FAB2 /* Register.swift in Sources */,
 				094808F329FDF8630013FAB2 /* SearchView.swift in Sources */,
+				09AF4DAB29FEDB8800E69316 /* API.swift in Sources */,
 				0950B28A29FD730E00E42049 /* MovilityAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
