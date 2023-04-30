@@ -196,7 +196,7 @@ app.get('/scraper', (req, res) => {
       let price = await trip_data[i].$$(".price")
       temp = await price[0].evaluate(el => el.textContent)
       temp = temp.cleanup().replaceAll('-', ' ')
-      dict["price"] = temp
+      dict["price"] = temp.replace("seleccionar","").replace("desde", "").replace("mxn", "$")
 
       console.log(dict)
       resultado.push(dict)
