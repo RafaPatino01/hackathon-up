@@ -167,6 +167,7 @@ app.get('/scraper', (req, res) => {
       let dict = new Object();
       let temp = ""
 
+      dict["id"] = i
       // Company
       let company = await trip_data[i].$$(".company")
       temp = await company[0].evaluate(el => el.textContent)
@@ -183,7 +184,7 @@ app.get('/scraper', (req, res) => {
       let bus_stations = await trip_data[i].$$(".bus-stations")
       temp = await bus_stations[0].evaluate(el => el.textContent)
       temp = temp.cleanup().replaceAll('-', ' ')
-      dict["bus-stations"] = temp
+      dict["bus_stations"] = temp
 
       //duration
       let duration = await trip_data[i].$$(".duration")
@@ -195,7 +196,7 @@ app.get('/scraper', (req, res) => {
       let price = await trip_data[i].$$(".price")
       temp = await price[0].evaluate(el => el.textContent)
       temp = temp.cleanup().replaceAll('-', ' ')
-      dict["price"] = temp
+      dict["price"] = temp.replace("seleccionar","").replace("desde", "").replace("mxn", "$")
 
       console.log(dict)
       resultado.push(dict)
