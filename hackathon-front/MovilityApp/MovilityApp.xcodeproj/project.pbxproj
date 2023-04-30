@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094808F329FDF8630013FAB2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094808F229FDF8630013FAB2 /* SearchView.swift */; };
+		094808F529FECC860013FAB2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094808F429FECC850013FAB2 /* Register.swift */; };
 		0950B28A29FD730E00E42049 /* MovilityAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B28929FD730E00E42049 /* MovilityAppApp.swift */; };
-		0950B28C29FD730E00E42049 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B28B29FD730E00E42049 /* ContentView.swift */; };
-		0950B28E29FD731100E42049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0950B28D29FD731100E42049 /* Assets.xcassets */; };
 		0950B29129FD731100E42049 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0950B29029FD731100E42049 /* Preview Assets.xcassets */; };
-		0950B29329FD731100E42049 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B29229FD731100E42049 /* Persistence.swift */; };
-		0950B29629FD731100E42049 /* MovilityApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0950B29429FD731100E42049 /* MovilityApp.xcdatamodeld */; };
 		0950B2A029FD731200E42049 /* MovilityAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B29F29FD731200E42049 /* MovilityAppTests.swift */; };
 		0950B2AA29FD731200E42049 /* MovilityAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B2A929FD731200E42049 /* MovilityAppUITests.swift */; };
 		0950B2AC29FD731200E42049 /* MovilityAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B2AB29FD731200E42049 /* MovilityAppUITestsLaunchTests.swift */; };
+		0950B2B929FD96F200E42049 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B2B829FD96F100E42049 /* LoginView.swift */; };
+		0950B2BD29FD989900E42049 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0950B2BC29FD989900E42049 /* Colors.xcassets */; };
+		0950B2BF29FD9E0400E42049 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B2BE29FD9E0400E42049 /* IntroductionView.swift */; };
+		0950B2C129FD9E1D00E42049 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0950B2C029FD9E1D00E42049 /* Images.xcassets */; };
+		0950B2C429FDBEF100E42049 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950B2C329FDBEF100E42049 /* Login.swift */; };
+		0960A0BE29FDEAC300A3D410 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960A0BD29FDEAC300A3D410 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +40,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		094808F229FDF8630013FAB2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		094808F429FECC850013FAB2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		0950B28629FD730E00E42049 /* MovilityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovilityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0950B28929FD730E00E42049 /* MovilityAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovilityAppApp.swift; sourceTree = "<group>"; };
-		0950B28B29FD730E00E42049 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0950B28D29FD731100E42049 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0950B29029FD731100E42049 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0950B29229FD731100E42049 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		0950B29529FD731100E42049 /* MovilityApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovilityApp.xcdatamodel; sourceTree = "<group>"; };
 		0950B29B29FD731200E42049 /* MovilityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovilityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0950B29F29FD731200E42049 /* MovilityAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovilityAppTests.swift; sourceTree = "<group>"; };
 		0950B2A529FD731200E42049 /* MovilityAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovilityAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0950B2A929FD731200E42049 /* MovilityAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovilityAppUITests.swift; sourceTree = "<group>"; };
 		0950B2AB29FD731200E42049 /* MovilityAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovilityAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0950B2B829FD96F100E42049 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0950B2BC29FD989900E42049 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0950B2BE29FD9E0400E42049 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		0950B2C029FD9E1D00E42049 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0950B2C329FDBEF100E42049 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		0960A0BD29FDEAC300A3D410 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		094808F029FDF7AC0013FAB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0960A0BD29FDEAC300A3D410 /* RegisterView.swift */,
+				0950B2B829FD96F100E42049 /* LoginView.swift */,
+				0950B2BE29FD9E0400E42049 /* IntroductionView.swift */,
+				094808F229FDF8630013FAB2 /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		094808F129FDF7D80013FAB2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0950B2C029FD9E1D00E42049 /* Images.xcassets */,
+				0950B2BC29FD989900E42049 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		0950B27D29FD730E00E42049 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +126,10 @@
 		0950B28829FD730E00E42049 /* MovilityApp */ = {
 			isa = PBXGroup;
 			children = (
+				094808F129FDF7D80013FAB2 /* Assets */,
+				094808F029FDF7AC0013FAB2 /* Views */,
+				0950B2C229FDBEDA00E42049 /* ViewModel */,
 				0950B28929FD730E00E42049 /* MovilityAppApp.swift */,
-				0950B28B29FD730E00E42049 /* ContentView.swift */,
-				0950B28D29FD731100E42049 /* Assets.xcassets */,
-				0950B29229FD731100E42049 /* Persistence.swift */,
-				0950B29429FD731100E42049 /* MovilityApp.xcdatamodeld */,
 				0950B28F29FD731100E42049 /* Preview Content */,
 			);
 			path = MovilityApp;
@@ -131,6 +158,15 @@
 				0950B2AB29FD731200E42049 /* MovilityAppUITestsLaunchTests.swift */,
 			);
 			path = MovilityAppUITests;
+			sourceTree = "<group>";
+		};
+		0950B2C229FDBEDA00E42049 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0950B2C329FDBEF100E42049 /* Login.swift */,
+				094808F429FECC850013FAB2 /* Register.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +273,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0950B2C129FD9E1D00E42049 /* Images.xcassets in Resources */,
 				0950B29129FD731100E42049 /* Preview Assets.xcassets in Resources */,
-				0950B28E29FD731100E42049 /* Assets.xcassets in Resources */,
+				0950B2BD29FD989900E42049 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0950B29329FD731100E42049 /* Persistence.swift in Sources */,
-				0950B28C29FD730E00E42049 /* ContentView.swift in Sources */,
-				0950B29629FD731100E42049 /* MovilityApp.xcdatamodeld in Sources */,
+				0950B2C429FDBEF100E42049 /* Login.swift in Sources */,
+				0950B2B929FD96F200E42049 /* LoginView.swift in Sources */,
+				0960A0BE29FDEAC300A3D410 /* RegisterView.swift in Sources */,
+				0950B2BF29FD9E0400E42049 /* IntroductionView.swift in Sources */,
+				094808F529FECC860013FAB2 /* Register.swift in Sources */,
+				094808F329FDF8630013FAB2 /* SearchView.swift in Sources */,
 				0950B28A29FD730E00E42049 /* MovilityAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,17 +460,18 @@
 		0950B2B029FD731200E42049 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MovilityApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "MovilityApp/Preview\\ Content MovilityApp/Assets/Images.xcassets MovilityApp/Assets/Colors.xcassets";
 				DEVELOPMENT_TEAM = BAHVW2YTLF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = IntroductionView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,17 +490,18 @@
 		0950B2B129FD731200E42049 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MovilityApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "MovilityApp/Preview\\ Content MovilityApp/Assets/Images.xcassets MovilityApp/Assets/Colors.xcassets";
 				DEVELOPMENT_TEAM = BAHVW2YTLF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = IntroductionView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -591,19 +633,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0950B29429FD731100E42049 /* MovilityApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0950B29529FD731100E42049 /* MovilityApp.xcdatamodel */,
-			);
-			currentVersion = 0950B29529FD731100E42049 /* MovilityApp.xcdatamodel */;
-			path = MovilityApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0950B27E29FD730E00E42049 /* Project object */;
 }
