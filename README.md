@@ -5,6 +5,7 @@
 
 ## Documento escrito
 - ⚡️ Revisa el [documento escrito del proyecto](https://rafaelpatinogoji.notion.site/ComparaBus-494bd370caab470f8ca5fc322c97b5dc).
+- Ahí añadimos detalles importantes sobre nuestro proyecto.
 
 ## Arquitectura de nuestra app
 <img src="https://i.ibb.co/wwhmsv3/image.png" style="width: 100%">
