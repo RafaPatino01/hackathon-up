@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct IntroductionView: View {
     @State var isActive : Bool = false
     
@@ -42,6 +43,9 @@ struct IntroductionView: View {
 
 struct IntroductionView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroductionView()
+        Group {
+            IntroductionView()
+            IntroductionView()
+        }
     }
 }

@@ -20,6 +20,8 @@
 		0960A0BE29FDEAC300A3D410 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960A0BD29FDEAC300A3D410 /* RegisterView.swift */; };
 		09AF4DA729FEDAFE00E69316 /* TerminalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF4DA629FEDAFE00E69316 /* TerminalsView.swift */; };
 		09AF4DAB29FEDB8800E69316 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF4DAA29FEDB8800E69316 /* API.swift */; };
+		09AF4DB129FEFEEF00E69316 /* SharedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF4DB029FEFEEF00E69316 /* SharedObjects.swift */; };
+		09AF4DB329FF069900E69316 /* BusesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF4DB229FF069800E69316 /* BusesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		0960A0BD29FDEAC300A3D410 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		09AF4DA629FEDAFE00E69316 /* TerminalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalsView.swift; sourceTree = "<group>"; };
 		09AF4DAA29FEDB8800E69316 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		09AF4DB029FEFEEF00E69316 /* SharedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedObjects.swift; sourceTree = "<group>"; };
+		09AF4DB229FF069800E69316 /* BusesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				0950B2BE29FD9E0400E42049 /* IntroductionView.swift */,
 				094808F229FDF8630013FAB2 /* SearchView.swift */,
 				09AF4DA629FEDAFE00E69316 /* TerminalsView.swift */,
+				09AF4DB229FF069800E69316 /* BusesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				09AF4DAA29FEDB8800E69316 /* API.swift */,
+				09AF4DB029FEFEEF00E69316 /* SharedObjects.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,12 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				09AF4DA729FEDAFE00E69316 /* TerminalsView.swift in Sources */,
+				09AF4DB329FF069900E69316 /* BusesView.swift in Sources */,
 				0950B2B929FD96F200E42049 /* LoginView.swift in Sources */,
 				0960A0BE29FDEAC300A3D410 /* RegisterView.swift in Sources */,
 				0950B2BF29FD9E0400E42049 /* IntroductionView.swift in Sources */,
 				094808F329FDF8630013FAB2 /* SearchView.swift in Sources */,
 				09AF4DAB29FEDB8800E69316 /* API.swift in Sources */,
 				0950B28A29FD730E00E42049 /* MovilityAppApp.swift in Sources */,
+				09AF4DB129FEFEEF00E69316 /* SharedObjects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

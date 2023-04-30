@@ -8,50 +8,71 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State private var origin: String = ""
-    @State private var destination: String = ""
+    @StateObject var originObject = Origin()
+    @StateObject var destinationObject = Destination()
+
+    @State private var origin: String = "Ciudad de origen"
+    @State private var originSlug: String = ""
+    @State private var destination: String = "Ciudad de destino"
+    @State private var destinationSlug: String = ""
     @State private var departureDate = Date()
-    @State private var returnDate = Date()
+    
     var body: some View {
         ZStack{
-            VStack{
-                Text("Búsqueda")
-                    .font(.largeTitle)
-                VStack(alignment:.leading){
-                    Text("Origen")
-                    TextField("Ciudad de Origen",text: $origin)
-                    Text("Destino")
-                    TextField("Ciudad de Destino",text: $destination)
+            NavigationView{
+                VStack{
+                    Text("Búsqueda")
+                        .font(.largeTitle)
                     VStack(alignment:.leading){
-                        DatePicker(
-                            "Fecha de salida",
-                            selection: $departureDate,
-                            displayedComponents: [.date]
-                            )
-                        DatePicker(
-                            "Fecha de llegada", selection: $returnDate,
+                        Text("Origen")
+                        NavigationLink(destination: TerminalsView(sharedVariable:$origin, sharedSlug: $originSlug).navigationBarHidden(true)){
+                            Text(origin)
+                                .multilineTextAlignment(.leading)
+                                .padding([.top, .leading, .bottom], 8.0)
+                                .frame(maxWidth:.infinity, alignment: .leading)
+                                .border(.tertiary)
+                                .foregroundColor(origin != "Ciudad de origen" ? Color("OnPrimaryContainer") : Color("Placeholder"))
+                                .cornerRadius(5)
+                        }
+                        Text("Destino")
+                        NavigationLink(destination: TerminalsView(sharedVariable:$destination, sharedSlug: $destinationSlug).navigationBarHidden(true)){
+                            Text(destination)
+                                .multilineTextAlignment(.leading)
+                                .padding([.top, .leading, .bottom], 8.0)
+                                .frame(maxWidth:.infinity, alignment: .leading)
+                                .border(.tertiary)
+                                .foregroundColor(destination != "Ciudad de destino" ? Color("OnPrimaryContainer") : Color("Placeholder"))
+                                .cornerRadius(5)
+                        }
+                        VStack(alignment:.leading){
+                            DatePicker(
+                                "Fecha de salida",
+                                selection: $departureDate,
                                 displayedComponents: [.date]
-                            )
+                                )
+                        }
+                        .datePickerStyle(.compact)
+                        .padding()
+                        NavigationLink(destination:BusesView(origin: $origin, destination: $destination ,originSlug: $originSlug, destinationSlug: $destinationSlug, departure: $departureDate ).navigationTitle("").navigationBarTitleDisplayMode(.inline)){
+                                Text("Buscar")
+                                    .foregroundColor(Color("OnPrimary"))
+                                    .padding()
+                                    .frame(maxWidth:.infinity)
+                                    .cornerRadius(20)
+                                    .background(Color("Primary"))
+                                    .padding(.top)
+                        }
+                        Spacer()
+                        
                     }
-                    .datePickerStyle(.compact)
-                    Button(action:{getBuses()}){
-                            Text("Buscar")
-                                .foregroundColor(Color("OnPrimary"))
-                                .padding()
-                                .frame(maxWidth:.infinity)
-                                .cornerRadius(20)
-                                .background(Color("Primary"))
-                                .padding(.top)
-                    }
-                    Spacer()
-                    
+                    .padding()
+                    .textFieldStyle(.roundedBorder)
                 }
-                .padding()
-                .textFieldStyle(.roundedBorder)
+                .padding(.top)
+                
             }
-            .padding(.top)
+            }
             
-        }
     }
 }
 
