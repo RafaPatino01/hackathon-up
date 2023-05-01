@@ -60,6 +60,8 @@ app.get('/', (req, res) => {
 // GET CITIES FROM DATABASE
 app.get('/get_terminales', function(req, res) {
 
+  console.log('[INFO] Getting terminales from SQL database')  
+
 	const sql = 'SELECT * FROM terminales';
 
 	connection.query(sql,(err,result)=>{
@@ -106,8 +108,8 @@ app.get('/login', function(req, res) {
 // new user to DB
 app.get('/add_user', function (req, res) {
 
-	console.log('Recieved: ' + typeof(req.query.user_name))
-  console.log('Recieved: ' + typeof(req.query.password))  
+	console.log('[INFO] Recieved user: ' + typeof(req.query.user_name))
+  console.log('[INFO] Recieved pass: ' + typeof(req.query.password))  
   console.log('[INFO] Adding USER to DB')  
   
   var og_string = req.query.password;
@@ -137,7 +139,7 @@ app.get('/scraper', (req, res) => {
 
   // Scrapping the website
   (async () => {
-    console.log('Recieved: ' + typeof(req.query.link))
+    console.log('Recieved scrapper request: ' + typeof(req.query.link))
 
     // Launch the browser
     const browser = await puppeteer.launch({
@@ -214,5 +216,5 @@ app.get('/scraper', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`[INFO] Backend hackaton app listening on port ${port}`)
 })
