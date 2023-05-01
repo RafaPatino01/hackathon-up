@@ -25,7 +25,7 @@ struct SearchView: View {
                         .font(.largeTitle)
                     VStack(alignment:.leading){
                         Text("Origen")
-                        NavigationLink(destination: TerminalsView(sharedVariable:$origin, sharedSlug: $originSlug).navigationBarHidden(true)){
+                        NavigationLink(destination: TerminalsView(sharedVariable:$origin, sharedSlug: $originSlug)){
                             Text(origin)
                                 .multilineTextAlignment(.leading)
                                 .padding([.top, .leading, .bottom], 8.0)
@@ -35,7 +35,7 @@ struct SearchView: View {
                                 .cornerRadius(5)
                         }
                         Text("Destino")
-                        NavigationLink(destination: TerminalsView(sharedVariable:$destination, sharedSlug: $destinationSlug).navigationBarHidden(true)){
+                        NavigationLink(destination: TerminalsView(sharedVariable:$destination, sharedSlug: $destinationSlug).navigationTitle("").navigationBarTitleDisplayMode(.inline)){
                             Text(destination)
                                 .multilineTextAlignment(.leading)
                                 .padding([.top, .leading, .bottom], 8.0)

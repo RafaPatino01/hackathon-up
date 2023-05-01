@@ -13,7 +13,7 @@ struct IntroductionView: View {
     
     var body: some View {
         if isActive{
-            LoginView()
+            LoginView().navigationBarHidden(true)
         }
         else{
             ZStack{

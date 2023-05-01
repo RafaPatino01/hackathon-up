@@ -22,6 +22,7 @@ struct BusesView: View {
                         .fontWeight(.bold)
                     Text(origin)
                 }
+                .padding()
                 HStack(spacing:20){
                     Text("Llegada: ")
                         .fontWeight(.bold)
@@ -34,29 +35,50 @@ struct BusesView: View {
             List(buses) { bus in
                 VStack(alignment:.leading){
                     HStack{
-                        Text("Duración: ")
-                            .fontWeight(.bold)
-                        Text(bus.duration)
+                        VStack(alignment:.leading){
+                            HStack{
+                                Text("Compañía: ")
+                                    .fontWeight(.bold)
+                                    
+                                Text(bus.company)
+                                    .font(.title2)
+                            }
+                            HStack{
+                                Text("Duración: ")
+                                    .fontWeight(.bold)
+                                Text(bus.duration)
+                            }
+                            HStack{
+                                Text("Precio: ")
+                                    .fontWeight(.bold)
+                                Text(bus.price)
+                            }
+                            
+                            HStack{
+                                Text("Horario: ")
+                                    .fontWeight(.bold)
+                                Text(bus.hour)
+                            }
+                            
+                        }
+                        VStack(alignment:.trailing){
+                            Text("➡︎")
+                                .padding()
+                                .foregroundColor(Color("OnPrimary"))
+                                .background(Color("Primary"))
+                                .cornerRadius(10)
+                        }
                     }
-                    HStack{
-                        Text("Precio: ")
-                            .fontWeight(.bold)
-                        Text(bus.price)
-                    }
-                    HStack{
-                        Text("Compañía: ")
-                            .fontWeight(.bold)
-                        Text(bus.company)
-                    }
-                    HStack{
-                        Text("Horario: ")
-                            .fontWeight(.bold)
-                        Text(bus.hour)
-                    }
-                }
-                .padding(.vertical,2.0)
-                
+                    .padding(.top)
+                    .padding(.bottom)
                     
+                    
+                    
+                }
+                HStack{
+                    Text("")
+                }
+                .padding(.bottom,1.5)
                 
             }
             .onAppear{

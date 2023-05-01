@@ -14,23 +14,37 @@ struct TerminalsView: View {
     @State var terminals : [Terminal] = []
     @State private var searchText = ""
     var body: some View {
-            NavigationView{
-                List(searchResults) { terminal in
-                    //NavigationLink(destination: SearchView().hidden){
-                        Text(terminal.name)
-                            .onTapGesture{
-                                sharedVariable = terminal.name
-                                sharedSlug = terminal.slug
-                                presentationMode.wrappedValue.dismiss()
-                            }
-                    //}
+            VStack{
+                NavigationView{
+                    List(searchResults) { terminal in
+                        //NavigationLink(destination: SearchView().hidden){
+                            Text(terminal.name)
+                                .onTapGesture{
+                                    sharedVariable = terminal.name
+                                    sharedSlug = terminal.slug
+                                    presentationMode.wrappedValue.dismiss()
+                                }
+                        //}
+                    }
+                    .onAppear{
+                        getTerminals { (terminals) in
+                            self.terminals = terminals
+                        }
+                    }
+                    .searchable(text: $searchText)
                 }
-                .onAppear{
-                    getTerminals { (terminals) in
-                        self.terminals = terminals
+                .navigationTitle("")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("Regresar") {
+                            presentationMode.wrappedValue.dismiss() // this changes in iOS15
+                        }
                     }
                 }
-                .searchable(text: $searchText)
+                Spacer()
+                
             }
     }
     
